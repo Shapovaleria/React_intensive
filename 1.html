@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 1</title>
+  </head>
+
+  <body>
+    <script>
+      
+      const container = document.createElement("div");
+      container.style.width = "80%";
+      container.style.padding = "10px 20px";
+      container.style.fontFamily = "sans-serif";
+      document.body.append(container);
+
+      const firstParagraph = document.createElement("p");
+      firstParagraph.textContent =
+        "This is my first task of the first homework for React intensive course.";
+      firstParagraph.style.fontStyle = 'italic';
+      container.append(firstParagraph);
+
+      const input = document.createElement("input");
+      input.setAttribute("type", "text");
+      input.placeholder = "write something";
+      input.style.background = "#E6E6FA";
+      input.style.height = "40px";
+      input.style.border = "none";
+      input.style.padding = "0 10px";
+      container.append(input);
+
+      const span = document.createElement("span");
+      span.textContent = "Hello, React!";
+      span.style.display = "inline-block";
+      span.style.margin = "10px";
+      span.style.backgroundColor = "#FFFACD";
+      container.append(span);
+
+      const lastParagraph = document.createElement("p");
+      lastParagraph.textContent = "Move to ";
+      container.append(lastParagraph);
+
+      const link = document.createElement("a");
+      link.setAttribute("href", "https://github.com/Shapovaleria/React_intensive");
+      link.textContent = "my repository";
+      link.style.textDecoration = "none";
+      link.style.color = "#EE82EE";
+      lastParagraph.append(link);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 2</title>
+  </head>
+
+  <body>
+    <script src="https://unpkg.com/react@16.13.1/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16.13.1/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone@7.9.3/babel.js"></script>
+
+    <script type="text/babel">
+      
+      const root = document.createElement("div");
+      root.id = "root";
+      document.body.append(root);
+
+      const firstParagraph = React.createElement(
+        "p",
+        {
+          style: {
+            fontStyle: "italic",
+          },
+        },
+        "This is my second task of the first homework for React intensive course."
+      );
+
+      const input = React.createElement("input", {
+        placeholder: "write something",
+        style: {
+          background: "#E6E6FA",
+          height: "40px",
+          border: "none",
+          padding: "0 10px",
+        },
+      });
+
+      const span = React.createElement(
+        "span",
+        {
+          style: {
+            display: "inline-block",
+            margin: "10px",
+            backgroundColor: "#FFFACD",
+          },
+        },
+        "Hello, React!"
+      );
+
+      const link = React.createElement(
+        "a",
+        {
+          href: "https://github.com/Shapovaleria/React_intensive",
+          style: {
+            textDecoration: "none",
+            color: "#EE82EE",
+          },
+        },
+        "my repository"
+      );
+
+      const lastParagraph = React.createElement("p", {}, "Move to ", link);
+
+      const container = React.createElement(
+        "div",
+        {
+          style: {
+            width: "80%",
+            padding: "10px 20px",
+            fontFamily: "sans-serif",
+          },
+        },
+        firstParagraph,
+        input,
+        span,
+        lastParagraph
+      );
+
+      ReactDOM.render(container, document.getElementById("root"));
+    </script>
+  </body>
+</html>
